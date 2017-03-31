@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <ul id="messages">
+
+        </ul>
+    </div>
+    <script>
+        (function() {
+            var URI = 'ws://echo.websocket.org/'
+            var websocket = null
+
+            var init = function() {
+                websocket = new WebSocket(URI)
+                websocket.onopen = function(event) {
+                    onOpen(event)
+                }
+                websocket.onmessage = function(event) {
+                    onMessage(event)
+                }
+                websocket.onclose = function(event) {
+                    onClose(event)
+                }
+            }
+
+            function onOpen(e) {
+                console.log('Connected')
+                sendMessage('This is my first message from WS')
+            }
+
+            function sendMessage(str) {
+                websocket.send(str)
+            }
+
+            function onMessage(event) {
+                console.log('Reciveid')
+                console.log(event.data)
+
+                var msg = document.getElementById('messages')
+                var item = document.createElement('li')
+                item.innerHTML = event.data
+
+                msg.appendChild(item)
+                websocket.close()
+            }
+
+            function onClose(event) {
+                console.log('Disconnected')
+            }
+
+            init()
+        })()
+    </script>
+</body>
+</html>
