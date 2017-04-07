@@ -1,0 +1,38 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        List of users
+    </div>
+
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {{#each users}}
+                        <tr>
+                            <td>{{ this.name }}</td>
+                            <td>{{ this.email }}</td>
+                            <td>
+                                <a href="/users/edit/{{ this._id }}" class="btn btn-info">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <form method="POST" class="inline" action="/users/{{ this._id }}?_method=DELETE">
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
