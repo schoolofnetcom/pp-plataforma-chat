@@ -1,0 +1,87 @@
+html {
+  min-height: 100%;
+  height: 100%; }
+
+body {
+  min-height: 100%;
+  height: 100%;
+  background: #fefefe; }
+
+main {
+  min-height: 100%;
+  height: 100%; }
+
+.chatbar {
+  padding: 0;
+  background: #3C382C;
+  min-height: 100%;
+  height: 100%; }
+  .chatbar .title {
+    color: white;
+    background: #322F24;
+    padding: 1rem 15px; }
+    .chatbar .title h4 {
+      display: inline-block; }
+  .chatbar .channels {
+    margin: 6rem 0; }
+    .chatbar .channels .list-group-item {
+      border: 0;
+      background: #3C382C;
+      color: #857D64;
+      cursor: pointer; }
+      .chatbar .channels .list-group-item.title h4 {
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1em; }
+      .chatbar .channels .list-group-item:hover, .chatbar .channels .list-group-item:active {
+        background: #322F24; }
+  .chatbar .messages {
+    margin: 3.5rem 0; }
+    .chatbar .messages .list-group-item {
+      border: 0;
+      background: #3C382C;
+      color: #857D64;
+      text-transform: capitalize;
+      cursor: pointer; }
+      .chatbar .messages .list-group-item.title h4 {
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1em; }
+      .chatbar .messages .list-group-item:hover, .chatbar .messages .list-group-item:active {
+        background: #322F24; }
+
+.chatbox {
+  padding: 0; }
+  .chatbox .header {
+    padding: 1rem 15px;
+    border-bottom: 1px solid #ebebeb; }
+    .chatbox .header .username {
+      font-size: 1em;
+      font-weight: bold; }
+  .chatbox .conversation .message {
+    margin: 1em 0 0 0; }
+    .chatbox .conversation .message.first-child {
+      margin: 1em 0; }
+    .chatbox .conversation .message .avatar {
+      border-radius: 10%;
+      border: 1px solid #ebebeb;
+      padding: 1rem 0;
+      background: #3C382C; }
+      .chatbox .conversation .message .avatar h2 {
+        color: white;
+        text-align: center;
+        margin: 0;
+        font-weight: bold; }
+    .chatbox .conversation .message .text {
+      padding: 0.8em 15px;
+      font-size: 1.2em;
+      margin: 0;
+      font-weight: 300; }
+  .chatbox .type {
+    margin: 1rem 0 0 0; }
+    .chatbox .type form .form-control {
+      border: 1px solid #3C382C; }
+      .chatbox .type form .form-control:focus {
+        box-shadow: none; }
