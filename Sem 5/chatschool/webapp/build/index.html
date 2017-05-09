@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/application.css">
+</head>
+<body>
+    <main>
+        <aside class="col-xs-6 col-md-2 chatbar">
+            <div class="col-xs-12 title">
+                <i class="fa fa-commenting-o"></i>
+                <h4>ChatSchool</h4>
+            </div>
+            <ul class="list-group channels">
+            </ul>
+            <ul class="list-group messages">
+                <li class="list-group-item title">
+                    <h4>Mensagens</h4>
+                </li>
+                
+            </ul>
+        </aside>
+        <section class="col-xs-6 col-md-10 chatbox">
+            <header class="col-xs-12 header">
+                <span class="username"></span>
+				<button type="button" class="btn btn-default pull-right" id="btn_leave">Sair</button>
+            </header>
+            <div class="col-xs-12 conversation">
+            </div>
+            <div class="col-xs-12 type">
+                <form>
+                    <input type="text" id="message" class="form-control" name="message" placeholder="Type your message here">
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

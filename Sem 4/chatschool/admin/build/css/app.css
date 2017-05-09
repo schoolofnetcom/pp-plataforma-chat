@@ -1,0 +1,14 @@
+body {
+  background: #fefefe; }
+
+#header .navbar {
+  border-radius: 0; }
+
+#footer.footer-inverse {
+  background: #222222;
+  padding: 2rem; }
+  #footer.footer-inverse p {
+    color: white; }
+
+.inline {
+  display: inline-block; }
